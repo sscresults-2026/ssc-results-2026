@@ -11,51 +11,53 @@ body{
 font-family:Arial, sans-serif;
 background:#f2f2f2;
 margin:0;
+padding:0;
 }
 
+/* header */
 .header{
 display:flex;
 align-items:center;
-margin-top:20px;
-margin-left:120px;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+padding:15px;
+text-align:center;
 }
 
 .header img{
-width:140px;
-margin-right:40px;
-}
-
-.title{
-text-align:center;
-flex:1;
+width:80px;
+height:auto;
 }
 
 .title h2{
 color:#0b7a0b;
 margin:5px 0;
-font-size:22px;
+font-size:18px;
 }
 
 .title p{
 margin:3px 0;
 font-weight:bold;
 color:#0b7a0b;
-font-size:18px;
+font-size:15px;
 }
 
 .line{
-width:70%;
-margin:25px auto;
+width:90%;
+margin:20px auto;
 border-top:2px solid #ccc;
 }
 
 .memo{
-width:300px;
+width:90%;
+max-width:320px;
 margin:0 auto;
 border:2px solid #c44;
 background:#fff;
 text-align:center;
 padding:15px;
+border-radius:6px;
 }
 
 .memo h3{
@@ -69,15 +71,24 @@ margin-top:15px;
 }
 
 .inputbox input{
-padding:6px;
-width:170px;
+padding:8px;
+width:90%;
 border:1px solid #999;
+border-radius:4px;
 }
 
 button{
-margin-top:10px;
-padding:5px 12px;
+margin-top:15px;
+padding:8px 16px;
 cursor:pointer;
+border:none;
+background:#0b7a0b;
+color:white;
+border-radius:4px;
+}
+
+button:hover{
+background:#095e09;
 }
 
 </style>
@@ -114,9 +125,7 @@ cursor:pointer;
 <div class="line"></div>
 
 <script>
-
 function showResult(){
-
 let ht=document.getElementById("htno").value;
 
 if(ht==""){
@@ -124,10 +133,8 @@ alert("Enter Roll Number");
 return;
 }
 
-window.location.href="result.html?roll="+ht;
-
+window.location.href="result.html";
 }
-
 </script>
 
 </body>
